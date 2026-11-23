@@ -36,9 +36,14 @@ Check the glob path against the real path Kaggle shows in the Input panel. If no
 
 ## 3. Two passes (recommended)
 
+**Priority.** Pass A is the decisive step. R2 (paired test against the Isolation Forest, stronger baselines), R10 (held-out typologies), R8 (seeds) and R9 (rolling calibration) answer the remaining scientific objections. In Pass B, run R11 (larger, history-aware judge, fail-open and fail-closed) first, because the manuscript uses the judge as a stand-in for the LLM-judge component of guards such as FinHarness. R12–R14 come after that, if time allows.
+
+**Table 8.** Table 8 describes the V2 run. Take its engine and model version from your V2 notebook log: the lines `[<model>] loading from <path>` (the Kaggle path contains the model version) and, if present, `vLLM unavailable (...); using transformers`. R0 records the library versions and GPUs of the revision session in `environment.json`. Use those for Table 8 only if the V2 notebook ran on the same Kaggle image.
+
+
 | Pass | Accelerator | Set | Sections that run | Rough time |
 |---|---|---|---|---|
-| A | CPU | `os.environ["GL_REV_GPU"]="0"` before Cell 3 | R1–R10 | 1–3 h (R8 seeds and R9 rolling calibration dominate) |
+| A | CPU | `os.environ["GL_REV_GPU"]="0"` before Cell 3 | R0–R10 | 1–3 h (R8 seeds and R9 rolling calibration dominate) |
 | B | GPU T4×2 or P100 | `GL_REV_GPU` unset, `REV_OVERRIDE` as above | R11–R14 (R1–R10 run again from cache, quickly) | 4–9 h, depending on the model |
 
 If a session will hit the 12 h limit, shrink the run with `REV_OVERRIDE`. For example: `SEEDS=(1,2,3)`, `CLOSED_LOOP_PER_CAT=5`, `ROLL_N=6000`.
@@ -47,6 +52,7 @@ If a session will hit the 12 h limit, shrink the run with `REV_OVERRIDE`. For ex
 
 | Section | Reviewer request | Output files |
 |---|---|---|
+| R0 | execution environment for manuscript Table 8 | `environment.json` |
 | R1 | per-step and per-task logs for every guard and stream | `per_step_all_guards.csv.gz`, `per_task_all_guards.csv.gz` |
 | R2 | paired GL-vs-Isolation-Forest test by typology group; LOF, conformal-IF, fused score, GL+anomaly combination | `paired_tests_by_group.csv`, `stronger_baselines_summary.csv` |
 | R3 | agent parse failures; fail-open vs fail-closed judge (false holds) | `agent_parse_failures.csv`, `judge_fail_open_vs_closed.csv` |

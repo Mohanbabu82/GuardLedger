@@ -8,7 +8,7 @@
 # so the original agent and judge generations are reused (no re-generation, identical streams).
 # Outputs: <OUT_DIR>/revision/*.csv, *.json, revision_summary.md
 #
-# CPU sections (R1-R10) need no GPU. GPU sections (R11-R14) run only if REV["RUN_GPU"] is True.
+# CPU sections (R0-R10) need no GPU. GPU sections (R11-R14) run only if REV["RUN_GPU"] is True.
 # Each section is isolated: a failure is logged and the next section still runs.
 # =====================================================================================
 import os, json, time, math, copy, traceback
@@ -153,6 +153,39 @@ def iforest_guard_on(prop, bench):
     return score_guard("IsolationForest", IF_SCORE, IF_THR, prop, bench)
 
 # ---------- R1: per-task and per-step logs for every replay ----------
+# ---------- R0: execution environment (fills manuscript Table 8; does not load any model) ----------
+@section("R0 environment record")
+def _r0():
+    import platform, importlib, glob as _glob
+    env = dict(python=platform.python_version(), platform=platform.platform())
+    for mod in ("numpy", "pandas", "scipy", "sklearn", "torch", "transformers", "vllm", "accelerate", "matplotlib"):
+        try: env[mod] = getattr(importlib.import_module(mod), "__version__", "unknown")
+        except Exception as e: env[mod] = f"not importable ({type(e).__name__})"
+    try:
+        import torch
+        env["cuda_available"] = bool(torch.cuda.is_available())
+        env["gpus"] = [torch.cuda.get_device_name(i) for i in range(torch.cuda.device_count())] if torch.cuda.is_available() else []
+        env["cuda"] = getattr(torch.version, "cuda", None)
+    except Exception: env["gpus"] = "torch not importable"
+    models = []
+    for spec in list(CFG.get("LLM_MODELS", [])) + list(REV["JUDGE_MODELS"]) + list(REV["EXTRA_AGENT_MODELS"]):
+        path = None
+        for pat in spec.get("kaggle_globs", []):
+            hits = sorted(_glob.glob(pat, recursive=True))
+            if hits: path = os.path.dirname(hits[-1]); break
+        info = dict(name=spec["name"], resolved_path=path or spec.get("hf_id"), source="Kaggle Models" if path else "Hugging Face Hub")
+        cfgp = os.path.join(path, "config.json") if path else None
+        if cfgp and os.path.exists(cfgp):
+            try: c = json.load(open(cfgp)); info.update(transformers_version_in_config=c.get("transformers_version"), name_or_path=c.get("_name_or_path"))
+            except Exception: pass
+        models.append(info)
+    env["models"] = models
+    env["note"] = ("This records the environment of the revision run. Table 8 of the manuscript describes the V2 run; "
+                   "use these values for Table 8 only if the V2 notebook used the same Kaggle image, and take the V2 "
+                   "engine and model path from the V2 log lines '[<model>] loading from ...' and 'vLLM unavailable ...'.")
+    json.dump(env, open(os.path.join(REV["OUT"], "environment.json"), "w"), indent=1)
+    log(f"[revision] environment: {json.dumps(env)[:400]}")
+
 @section("R1 per-task logs")
 def _r1():
     steps, tasks = [], []
