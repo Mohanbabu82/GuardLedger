@@ -19,10 +19,10 @@ CFG["LLM_MODELS"] = [
     dict(name="qwen2.5-7b-instruct", kaggle_globs=["/kaggle/input/qwen2.5/transformers/7b-instruct/*/config.json",
                                                    "/kaggle/input/**/*7b-instruct*/**/config.json"], hf_id="Qwen/Qwen2.5-7B-Instruct"),
     dict(name="phi-3.5-mini-instruct", kaggle_globs=["/kaggle/input/**/*phi-3.5-mini*/**/config.json"], hf_id="microsoft/Phi-3.5-mini-instruct")]
-CFG["LLM_TIME_BUDGET_MIN"] = 200
+CFG["LLM_TIME_BUDGET_MIN"] = 150  # per GPU section; bounds total GPU use
 Q14 = dict(name="qwen2.5-14b-instruct-nf4", quant="4bit",
            kaggle_globs=["/kaggle/input/qwen2.5/transformers/14b-instruct/*/config.json", "/kaggle/input/**/*14b-instruct*/**/config.json"],
            hf_id="Qwen/Qwen2.5-14B-Instruct")
-REV_OVERRIDE = dict(SKIP=("R2", "R4", "R5", "R6", "R7", "R8", "R9"), JUDGE_MODELS=[Q14], EXTRA_AGENT_MODELS=[Q14], CLOSED_LOOP_PER_CAT=10)
+REV_OVERRIDE = dict(SKIP=("R2", "R4", "R5", "R6", "R7", "R8", "R9", "R14"), JUDGE_MODELS=[Q14], EXTRA_AGENT_MODELS=[Q14], CLOSED_LOOP_PER_CAT=10)
 exec(compile(open(os.path.join(W, "guardledger_revision.py")).read(), "guardledger_revision.py", "exec"), globals())
 print(open(os.path.join(REV["OUT"], "revision_summary.md")).read())
