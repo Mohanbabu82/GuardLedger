@@ -1,0 +1,88 @@
+{
+ "bench_version": "v2-real-budgets",
+ "config": {
+  "SEED": 42,
+  "MAX_EVENTS": null,
+  "DATE_RANGE": [
+   "2017-01-01",
+   "2020-01-01"
+  ],
+  "SPLIT_Q": [
+   0.5,
+   0.7
+  ],
+  "TIER_Q": [
+   0.5,
+   0.9,
+   0.99
+  ],
+  "USER_AUTH_Q": 0.95,
+  "MATCH_TOL": 0.1,
+  "DUP_WINDOW_D": 60,
+  "DUP_AMT_TOL": 0.005,
+  "DUP_REF_SIM": 0.8,
+  "SPLIT_WINDOW_D": 14,
+  "SPLIT_LOW": 0.5,
+  "COMMIT_HORIZON_D": 90,
+  "BUDGET_Q": 0.95,
+  "BUDGET_MULT": 1.1,
+  "N_LEGIT": 240,
+  "N_PER_CAT": 40,
+  "N_CAL_PACKETS": 2500,
+  "N_TRAIN_PACKETS": 4000,
+  "N_AUDIT": 20000,
+  "ALPHA": 0.05,
+  "ALPHA_GRID": [
+   0.01,
+   0.02,
+   0.05,
+   0.1,
+   0.2
+  ],
+  "RUN_LLM": true,
+  "USE_VLLM_IF_AVAILABLE": true,
+  "MAX_NEW_TOKENS": 128,
+  "BATCH_SIZE": 16,
+  "LLM_TIME_BUDGET_MIN": 150,
+  "N_BOOT": 1000
+ },
+ "models": [
+  "qwen2.5-7b-instruct"
+ ],
+ "data": {
+  "path": "/kaggle/working/bpic2019/BPI_Challenge_2019.csv",
+  "n_lines": 1595923,
+  "n_loaded": 1595826,
+  "n_skipped_malformed": 0,
+  "n_out_of_date_range": 97,
+  "n_po_items": 235349,
+  "n_invoiced": 211334,
+  "n_vendors": 1864,
+  "n_users": 212,
+  "n_spend_areas": 21,
+  "cal_start": "2018-07-20",
+  "test_start": "2018-09-24",
+  "total_eur": 874751587.0
+ },
+ "bench": {
+  "LEGIT": 240,
+  "DUPLICATE": 40,
+  "INFLATED_MATCH": 40,
+  "OVERPRICED_COLLUSIVE": 40,
+  "SPLIT": 40,
+  "SPLIT_ADAPTIVE": 40,
+  "AUTHORITY": 40,
+  "SOD": 40,
+  "UNAPPROVED_VENDOR": 40,
+  "NO_GOODS_RECEIPT": 40,
+  "BUDGET_PLAIN": 40,
+  "BUDGET_ENCUMBRANCE": 40,
+  "PROMPT_INJECTION": 40
+ },
+ "lambda_star": 1.5892759073403064,
+ "crc_B": 20.0,
+ "amt_mean_cal": 2402.1168451801364,
+ "if_threshold": 0.5615926704173259,
+ "gpu": true,
+ "n_gpu": 2
+}

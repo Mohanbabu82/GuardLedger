@@ -1,0 +1,11 @@
+# Analysis scripts (tables, figures, checks)
+numpy
+pandas
+scipy
+matplotlib
+# Full pipeline (guard, baselines, LLM agents) additionally uses:
+scikit-learn
+torch
+transformers
+# vllm   # optional, faster generation on GPU
+# Exact versions used for the reported run: [to be recorded from the Kaggle environment log]

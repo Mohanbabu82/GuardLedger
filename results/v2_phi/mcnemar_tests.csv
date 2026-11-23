@@ -1,0 +1,29 @@
+stream,guardledger,baseline,gl_only_prevented,baseline_only_prevented,p_value
+approve_all,GuardLedger (full),NoGuard,438,0,2.817681462947307e-132
+approve_all,GuardLedger (full),AgentSpec-style,313,0,1.1985091468012028e-94
+approve_all,GuardLedger (full),GL-hard (no soft layer),38,0,7.275957614183426e-12
+approve_all,GuardLedger (full),GL-hard - encumbrance,78,0,6.617444900424222e-24
+approve_all,GuardLedger (full),GL-hard - trajectory,78,0,6.617444900424222e-24
+approve_all,GuardLedger (full),GL-hard - provenance,78,0,6.617444900424222e-24
+approve_all,GuardLedger (full),GL-hard - quantitative,273,0,1.3177747429038154e-82
+approve_all,GuardLedger (full),GL-hard + fixed z>3 (no CRC),12,0,0.00048828125
+approve_all,GuardLedger (full),IsolationForest,262,3,1.0464020376786867e-73
+phi-3.5-mini-instruct|plain,GuardLedger (full),NoGuard,384,0,5.075883674631299e-116
+phi-3.5-mini-instruct|plain,GuardLedger (full),AgentSpec-style,289,0,2.010764683385949e-87
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard (no soft layer),38,0,7.275957614183426e-12
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard - encumbrance,78,0,6.617444900424222e-24
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard - trajectory,78,0,6.617444900424222e-24
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard - provenance,54,0,1.1102230246251565e-16
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard - quantitative,273,0,1.3177747429038154e-82
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),12,0,0.00048828125
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest,238,3,1.320500255234396e-66
+phi-3.5-mini-instruct|plain,GuardLedger (full),LLM-as-judge (phi-3.5-mini-instruct),343,1,1.9254426269159417e-101
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),NoGuard,362,0,2.1289799200040754e-109
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,283,0,1.2868893973670072e-85
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),38,0,7.275957614183426e-12
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard - encumbrance,78,0,6.617444900424222e-24
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard - trajectory,78,0,6.617444900424222e-24
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard - provenance,54,0,1.1102230246251565e-16
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard - quantitative,267,0,8.433758354584419e-81
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),12,0,0.00048828125
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest,232,3,7.835611058808021e-65

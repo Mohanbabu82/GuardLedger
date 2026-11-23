@@ -1,0 +1,121 @@
+category,prevention,guard,stream
+AUTHORITY,0.0,NoGuard,approve_all
+BUDGET_ENCUMBRANCE,0.0,NoGuard,approve_all
+BUDGET_PLAIN,0.0,NoGuard,approve_all
+DUPLICATE,0.0,NoGuard,approve_all
+INFLATED_MATCH,0.0,NoGuard,approve_all
+NO_GOODS_RECEIPT,0.0,NoGuard,approve_all
+OVERPRICED_COLLUSIVE,0.0,NoGuard,approve_all
+PROMPT_INJECTION,0.0,NoGuard,approve_all
+SOD,0.0,NoGuard,approve_all
+SPLIT,0.0,NoGuard,approve_all
+SPLIT_ADAPTIVE,0.0,NoGuard,approve_all
+UNAPPROVED_VENDOR,0.0,NoGuard,approve_all
+AUTHORITY,0.0,AgentSpec-style,approve_all
+BUDGET_ENCUMBRANCE,0.0,AgentSpec-style,approve_all
+BUDGET_PLAIN,0.0,AgentSpec-style,approve_all
+DUPLICATE,0.125,AgentSpec-style,approve_all
+INFLATED_MATCH,0.0,AgentSpec-style,approve_all
+NO_GOODS_RECEIPT,1.0,AgentSpec-style,approve_all
+OVERPRICED_COLLUSIVE,0.0,AgentSpec-style,approve_all
+PROMPT_INJECTION,0.0,AgentSpec-style,approve_all
+SOD,1.0,AgentSpec-style,approve_all
+SPLIT,0.0,AgentSpec-style,approve_all
+SPLIT_ADAPTIVE,0.0,AgentSpec-style,approve_all
+UNAPPROVED_VENDOR,1.0,AgentSpec-style,approve_all
+AUTHORITY,1.0,GuardLedger (full),approve_all
+BUDGET_ENCUMBRANCE,1.0,GuardLedger (full),approve_all
+BUDGET_PLAIN,1.0,GuardLedger (full),approve_all
+DUPLICATE,1.0,GuardLedger (full),approve_all
+INFLATED_MATCH,1.0,GuardLedger (full),approve_all
+NO_GOODS_RECEIPT,1.0,GuardLedger (full),approve_all
+OVERPRICED_COLLUSIVE,0.15000000000000002,GuardLedger (full),approve_all
+PROMPT_INJECTION,1.0,GuardLedger (full),approve_all
+SOD,1.0,GuardLedger (full),approve_all
+SPLIT,1.0,GuardLedger (full),approve_all
+SPLIT_ADAPTIVE,0.8,GuardLedger (full),approve_all
+UNAPPROVED_VENDOR,1.0,GuardLedger (full),approve_all
+AUTHORITY,1.0,GL-hard (no soft layer),approve_all
+BUDGET_ENCUMBRANCE,1.0,GL-hard (no soft layer),approve_all
+BUDGET_PLAIN,1.0,GL-hard (no soft layer),approve_all
+DUPLICATE,1.0,GL-hard (no soft layer),approve_all
+INFLATED_MATCH,1.0,GL-hard (no soft layer),approve_all
+NO_GOODS_RECEIPT,1.0,GL-hard (no soft layer),approve_all
+OVERPRICED_COLLUSIVE,0.0,GL-hard (no soft layer),approve_all
+PROMPT_INJECTION,1.0,GL-hard (no soft layer),approve_all
+SOD,1.0,GL-hard (no soft layer),approve_all
+SPLIT,1.0,GL-hard (no soft layer),approve_all
+SPLIT_ADAPTIVE,0.0,GL-hard (no soft layer),approve_all
+UNAPPROVED_VENDOR,1.0,GL-hard (no soft layer),approve_all
+AUTHORITY,1.0,GL-hard - encumbrance,approve_all
+BUDGET_ENCUMBRANCE,0.0,GL-hard - encumbrance,approve_all
+BUDGET_PLAIN,1.0,GL-hard - encumbrance,approve_all
+DUPLICATE,1.0,GL-hard - encumbrance,approve_all
+INFLATED_MATCH,1.0,GL-hard - encumbrance,approve_all
+NO_GOODS_RECEIPT,1.0,GL-hard - encumbrance,approve_all
+OVERPRICED_COLLUSIVE,0.0,GL-hard - encumbrance,approve_all
+PROMPT_INJECTION,1.0,GL-hard - encumbrance,approve_all
+SOD,1.0,GL-hard - encumbrance,approve_all
+SPLIT,1.0,GL-hard - encumbrance,approve_all
+SPLIT_ADAPTIVE,0.0,GL-hard - encumbrance,approve_all
+UNAPPROVED_VENDOR,1.0,GL-hard - encumbrance,approve_all
+AUTHORITY,1.0,GL-hard - trajectory,approve_all
+BUDGET_ENCUMBRANCE,1.0,GL-hard - trajectory,approve_all
+BUDGET_PLAIN,1.0,GL-hard - trajectory,approve_all
+DUPLICATE,1.0,GL-hard - trajectory,approve_all
+INFLATED_MATCH,1.0,GL-hard - trajectory,approve_all
+NO_GOODS_RECEIPT,1.0,GL-hard - trajectory,approve_all
+OVERPRICED_COLLUSIVE,0.0,GL-hard - trajectory,approve_all
+PROMPT_INJECTION,1.0,GL-hard - trajectory,approve_all
+SOD,1.0,GL-hard - trajectory,approve_all
+SPLIT,0.0,GL-hard - trajectory,approve_all
+SPLIT_ADAPTIVE,0.0,GL-hard - trajectory,approve_all
+UNAPPROVED_VENDOR,1.0,GL-hard - trajectory,approve_all
+AUTHORITY,1.0,GL-hard - provenance,approve_all
+BUDGET_ENCUMBRANCE,1.0,GL-hard - provenance,approve_all
+BUDGET_PLAIN,1.0,GL-hard - provenance,approve_all
+DUPLICATE,1.0,GL-hard - provenance,approve_all
+INFLATED_MATCH,1.0,GL-hard - provenance,approve_all
+NO_GOODS_RECEIPT,1.0,GL-hard - provenance,approve_all
+OVERPRICED_COLLUSIVE,0.0,GL-hard - provenance,approve_all
+PROMPT_INJECTION,0.0,GL-hard - provenance,approve_all
+SOD,1.0,GL-hard - provenance,approve_all
+SPLIT,1.0,GL-hard - provenance,approve_all
+SPLIT_ADAPTIVE,0.0,GL-hard - provenance,approve_all
+UNAPPROVED_VENDOR,1.0,GL-hard - provenance,approve_all
+AUTHORITY,0.0,GL-hard - quantitative,approve_all
+BUDGET_ENCUMBRANCE,0.0,GL-hard - quantitative,approve_all
+BUDGET_PLAIN,0.0,GL-hard - quantitative,approve_all
+DUPLICATE,0.125,GL-hard - quantitative,approve_all
+INFLATED_MATCH,0.0,GL-hard - quantitative,approve_all
+NO_GOODS_RECEIPT,1.0,GL-hard - quantitative,approve_all
+OVERPRICED_COLLUSIVE,0.0,GL-hard - quantitative,approve_all
+PROMPT_INJECTION,1.0,GL-hard - quantitative,approve_all
+SOD,1.0,GL-hard - quantitative,approve_all
+SPLIT,0.0,GL-hard - quantitative,approve_all
+SPLIT_ADAPTIVE,0.0,GL-hard - quantitative,approve_all
+UNAPPROVED_VENDOR,1.0,GL-hard - quantitative,approve_all
+AUTHORITY,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+BUDGET_ENCUMBRANCE,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+BUDGET_PLAIN,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+DUPLICATE,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+INFLATED_MATCH,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+NO_GOODS_RECEIPT,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+OVERPRICED_COLLUSIVE,0.050000000000000044,GL-hard + fixed z>3 (no CRC),approve_all
+PROMPT_INJECTION,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+SOD,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+SPLIT,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+SPLIT_ADAPTIVE,0.6,GL-hard + fixed z>3 (no CRC),approve_all
+UNAPPROVED_VENDOR,1.0,GL-hard + fixed z>3 (no CRC),approve_all
+AUTHORITY,0.825,IsolationForest,approve_all
+BUDGET_ENCUMBRANCE,0.125,IsolationForest,approve_all
+BUDGET_PLAIN,0.07499999999999996,IsolationForest,approve_all
+DUPLICATE,0.125,IsolationForest,approve_all
+INFLATED_MATCH,0.025000000000000022,IsolationForest,approve_all
+NO_GOODS_RECEIPT,0.275,IsolationForest,approve_all
+OVERPRICED_COLLUSIVE,0.125,IsolationForest,approve_all
+PROMPT_INJECTION,0.050000000000000044,IsolationForest,approve_all
+SOD,0.15000000000000002,IsolationForest,approve_all
+SPLIT,0.85,IsolationForest,approve_all
+SPLIT_ADAPTIVE,0.85,IsolationForest,approve_all
+UNAPPROVED_VENDOR,1.0,IsolationForest,approve_all

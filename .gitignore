@@ -1,0 +1,26 @@
+# Data: the BPI Challenge 2019 log is not redistributed here (download it from its DOI)
+*BPI*2019*.csv
+*bpi*2019*.csv
+*.xes
+*.xes.gz
+data/
+# Kaggle / run outputs
+guardledger_out/
+llm_cache*.jsonl
+decision_log*.csv.gz
+analysis/tables_out/
+# Python / notebooks
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+# Credentials (never commit)
+kaggle.json
+.env
+*.key
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
