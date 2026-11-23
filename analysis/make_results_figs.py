@@ -1,4 +1,4 @@
-"""Final result figures (Figs. 3-8) for the GuardLedger IEEE Access manuscript.
+"""Final result figures (Figs. 3-8) for the GuardLedger manuscript.
 Reads only the V2 result CSVs.  Usage: python make_results_figs_final.py <res_v2_qwen> <res_v2_phi> <outdir>"""
 from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
@@ -132,25 +132,26 @@ for al in cnt["alpha"]:
     k = int(np.floor(al * (n_cal + 1) - 1 + 1e-12))  # exact beta-binomial predictive range (revision R2-3)
     band.append(np.array(betabinom(n_te, k + 1, n_cal - k).ppf([.025, .975])) / n_te)
 band = np.array(band)
-fig, axs = plt.subplots(1, 2, figsize=(7.16, 2.55), gridspec_kw=dict(wspace=0.3))
-ax = axs[0]
-ax.fill_between(cnt["alpha"], 100 * band[:, 0], 100 * band[:, 1], color=C["blue"], alpha=0.13, lw=0, label="Exchangeable 95% range (count)")
-ax.plot([0, .21], [0, 21], "--", color=C["muted"], lw=0.9, label="Target (risk = α)")
-k_c = np.rint(cnt["test_risk"] * n_te).astype(int)
-ci = np.array([cp(k, n_te) for k in k_c])
-ax.errorbar(cnt["alpha"], 100 * cnt["test_risk"], yerr=[100 * (cnt["test_risk"] - ci[:, 0]), 100 * (ci[:, 1] - cnt["test_risk"])],
-            fmt="o-", color=C["blue"], ms=3.5, lw=1.4, capsize=2, label="Count loss (deployed), CP 95%")
-ax.plot(wt["alpha"], 100 * wt["test_risk"], "s--", color=C["orange"], ms=3.2, lw=1.2, label="Weighted loss (normalised exposure ×100)")
-ax.set_xlabel("Target α"); ax.set_ylabel("Realised risk on test period (%)"); ax.set_xlim(0, 0.21); ax.set_ylim(0, 23)
-ax.set_xticks([0.01, 0.05, 0.10, 0.20]); ax.yaxis.grid(True, color=C["grid"], lw=0.5); ax.set_axisbelow(True)
-ax.legend(frameon=False, fontsize=6.0, loc="upper left"); ax.set_title("(a) S1 false-escalation risk, n = 2,470", fontsize=8, loc="left")
-ax = axs[1]
-for d, col, mk, lab in ((cnt, C["blue"], "o-", "Count-loss threshold"), (wt, C["orange"], "s--", "Weighted-loss threshold")):
-    k = np.rint(d["overpricing_recall"] * n_ov).astype(int); ci = np.array([cp(x, n_ov) for x in k])
-    ax.errorbar(d["alpha"], 100 * d["overpricing_recall"], yerr=[100 * (d["overpricing_recall"] - ci[:, 0]), 100 * (ci[:, 1] - d["overpricing_recall"])],
-                fmt=mk, color=col, ms=3.3, lw=1.2, capsize=2, label=lab)
-ax.set_xlabel("Target α"); ax.set_ylabel("Over-pricing recall (%), n = 40"); ax.set_xlim(0, 0.21); ax.set_ylim(0, 80)
-ax.set_xticks([0.01, 0.05, 0.10, 0.20]); ax.yaxis.grid(True, color=C["grid"], lw=0.5); ax.set_axisbelow(True)
-ax.legend(frameon=False, fontsize=6.0, loc="upper left"); ax.set_title("(b) Detection of collusive over-pricing (CP 95%)", fontsize=8, loc="left")
-save(fig, "fig8_crc")
+for with_wt, fname in ((False, "fig8_crc"), (True, "figS_crc_with_weighted")):  # main text: count loss only (ESWA revision)
+    fig, axs = plt.subplots(1, 2, figsize=(7.16, 2.55), gridspec_kw=dict(wspace=0.3))
+    ax = axs[0]
+    ax.fill_between(cnt["alpha"], 100 * band[:, 0], 100 * band[:, 1], color=C["blue"], alpha=0.13, lw=0, label="Exchangeable 95% range (count)")
+    ax.plot([0, .21], [0, 21], "--", color=C["muted"], lw=0.9, label="Target (risk = α)")
+    k_c = np.rint(cnt["test_risk"] * n_te).astype(int)
+    ci = np.array([cp(k, n_te) for k in k_c])
+    ax.errorbar(cnt["alpha"], 100 * cnt["test_risk"], yerr=[100 * (cnt["test_risk"] - ci[:, 0]), 100 * (ci[:, 1] - cnt["test_risk"])],
+                fmt="o-", color=C["blue"], ms=3.5, lw=1.4, capsize=2, label="Count loss (deployed), CP 95%")
+    if with_wt: ax.plot(wt["alpha"], 100 * wt["test_risk"], "s--", color=C["orange"], ms=3.2, lw=1.2, label="Weighted loss (normalised exposure ×100)")
+    ax.set_xlabel("Target α"); ax.set_ylabel("Realised risk on test period (%)"); ax.set_xlim(0, 0.21); ax.set_ylim(0, 23)
+    ax.set_xticks([0.01, 0.05, 0.10, 0.20]); ax.yaxis.grid(True, color=C["grid"], lw=0.5); ax.set_axisbelow(True)
+    ax.legend(frameon=False, fontsize=6.0, loc="upper left"); ax.set_title("(a) S1 false-escalation risk, n = 2,470", fontsize=8, loc="left")
+    ax = axs[1]
+    for d, col, mk, lab in ((cnt, C["blue"], "o-", "Count-loss threshold"), (wt, C["orange"], "s--", "Weighted-loss threshold"))[:2 if with_wt else 1]:
+        k = np.rint(d["overpricing_recall"] * n_ov).astype(int); ci = np.array([cp(x, n_ov) for x in k])
+        ax.errorbar(d["alpha"], 100 * d["overpricing_recall"], yerr=[100 * (d["overpricing_recall"] - ci[:, 0]), 100 * (ci[:, 1] - d["overpricing_recall"])],
+                    fmt=mk, color=col, ms=3.3, lw=1.2, capsize=2, label=lab)
+    ax.set_xlabel("Target α"); ax.set_ylabel("Over-pricing recall (%), n = 40"); ax.set_xlim(0, 0.21); ax.set_ylim(0, 80)
+    ax.set_xticks([0.01, 0.05, 0.10, 0.20]); ax.yaxis.grid(True, color=C["grid"], lw=0.5); ax.set_axisbelow(True)
+    ax.legend(frameon=False, fontsize=6.0, loc="upper left"); ax.set_title("(b) Detection of collusive over-pricing (CP 95%)", fontsize=8, loc="left")
+    save(fig, fname)
 print(sorted(os.listdir(OUT)))

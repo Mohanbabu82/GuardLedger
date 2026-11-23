@@ -9,7 +9,7 @@ GuardLedger checks each proposed payment against purchase-to-pay ledger state re
 
 The benchmark and natural audit are built from the public **BPI Challenge 2019** event log.
 
-> This repository accompanies the manuscript *"GuardLedger: Commitment-Aware and Provenance-Grounded Runtime Verification of LLM Agents in Financial Workflows"* (submitted to IEEE Access). [Add the citation or DOI once it is available.]
+> This repository accompanies the manuscript *"GuardLedger: Ledger-grounded runtime verification of large language model agents in purchase-to-pay workflows"*. [Add the citation or DOI once it is available.]
 
 ## Repository layout
 | Path | Contents |
@@ -42,3 +42,7 @@ python analysis/make_diagrams.py          # Figures 1-2 (diagrams)
 
 ## Citation
 [Add the BibTeX entry after publication.]
+
+## Revision experiments (reviewer-requested analyses)
+
+`revision/guardledger_revision.py` runs additional analyses on top of the frozen V2 pipeline (per-task logs, paired tests by typology group, stronger anomaly baselines, fail-closed judges, policy sensitivity, extra seeds, rolling-origin and adaptive conformal calibration, held-out typologies, and optional GPU runs with larger judges and agents). How to run it on Kaggle is described in `revision/RUN_REVISION_ON_KAGGLE.md`. Its results are not part of the V2 results in `results/` and are not reported in the manuscript until they have been run.
