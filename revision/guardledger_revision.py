@@ -221,8 +221,9 @@ def _r3():
                 r, sm, ct = run_guards_on(done, prop, make_guards([iforest_guard_on(prop, done)]), f"{m}|{tag}")
                 for g, d in r.items(): REPLAYS[(f"{m}|{tag}", g)] = d
                 REBUILT.append(sm); REBUILT_CAT.append(ct)
-            if tag != "plain" or missing: continue
-            jl = [(t["task_id"], j, s["packet"], prop[t["task_id"]][j]) for t in BENCH for j, s in enumerate(t["steps"])
+            if tag != "plain": continue
+            done = [t for t in BENCH if t["task_id"] not in missing]   # V2 evaluated the judge on tasks with complete streams
+            jl = [(t["task_id"], j, s["packet"], prop[t["task_id"]][j]) for t in done for j, s in enumerate(t["steps"])
                   if prop[t["task_id"]][j] and prop[t["task_id"]][j]["tool"] == "approve_invoice"]
             dec_open, dec_closed, unparse, unparse_legit = {}, {}, 0, 0
             legit_ids = {t["task_id"] for t in BENCH if t["category"] == "LEGIT"}
@@ -235,10 +236,11 @@ def _r3():
                     dec_open[k], dec_closed[k] = "ALLOW", "BLOCK"; continue
                 d = "BLOCK" if str(o.get("decision", "ALLOW")).upper().startswith(("BLOCK", "ESC", "DENY", "REJ")) else "ALLOW"
                 dec_open[k] = dec_closed[k] = d
-            r, sm, _ = run_guards_on(BENCH, prop, [PrecomputedGuard(f"LLM judge fail-open ({m})", dec_open),
+            r, sm, _ = run_guards_on(done, prop, [PrecomputedGuard(f"LLM judge fail-open ({m})", dec_open),
                                                   PrecomputedGuard(f"LLM judge fail-closed ({m})", dec_closed)], f"{m}|plain")
             for g, d in r.items(): REPLAYS[(f"{m}|plain", g)] = d
             sm["judged_approvals"], sm["unparseable"], sm["unparseable_on_legit_correct"] = len(jl), unparse, unparse_legit
+            sm["tasks_evaluated"], sm["tasks_missing_generation"] = len(done), len(missing)
             jsum.append(sm)
     rsave(pd.DataFrame(prow), "agent_parse_failures.csv")
     if REBUILT:  # compare with V2 expD_llm_summary.csv: identical streams must give identical numbers
