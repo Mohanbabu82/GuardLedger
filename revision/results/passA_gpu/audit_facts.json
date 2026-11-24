@@ -1,0 +1,13 @@
+{
+ "n_audit": 20000,
+ "hard_rule_exception_rate": 0.2652,
+ "hard_cp_lo": 0.2590915493466584,
+ "hard_cp_hi": 0.27137677181229214,
+ "r3_firings": 3308,
+ "r3_default_tier_share": 0.9407496977025392,
+ "r3_rate_mined_tier_approvers": 0.01383106343941853,
+ "r3_rate_default_tier_approvers": 0.5338823125750558,
+ "share_invoices_by_default_tier_approvers": 0.29145,
+ "items_with_multiple_invoices_share": 0.04561026621367125,
+ "items_with_price_change_share": 0.04697303793994341
+}

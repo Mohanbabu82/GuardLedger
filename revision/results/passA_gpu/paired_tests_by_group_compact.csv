@@ -1,0 +1,136 @@
+stream,guardledger,other,group,n_tasks,gl_only,other_only,p_value_exact_mcnemar,gl_prevention,other_prevention
+approve_all,GuardLedger (full),AgentSpec-style,rule-independent,80,38,0,0.0,0.475,0.0
+approve_all,GuardLedger (full),AgentSpec-style,rule-matched,400,275,0,0.0,1.0,0.3125
+approve_all,GuardLedger (full),AgentSpec-style,all,480,313,0,0.0,0.9125,0.26042
+approve_all,GuardLedger (full),GL-hard (no soft layer),rule-independent,80,38,0,0.0,0.475,0.0
+approve_all,GuardLedger (full),GL-hard (no soft layer),rule-matched,400,0,0,1.0,1.0,1.0
+approve_all,GuardLedger (full),GL-hard (no soft layer),all,480,38,0,0.0,0.9125,0.83333
+approve_all,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-independent,80,12,0,0.00049,0.475,0.325
+approve_all,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-matched,400,0,0,1.0,1.0,1.0
+approve_all,GuardLedger (full),GL-hard + fixed z>3 (no CRC),all,480,12,0,0.00049,0.9125,0.8875
+approve_all,GuardLedger (full),IsolationForest,rule-independent,80,2,3,1.0,0.475,0.4875
+approve_all,GuardLedger (full),IsolationForest,rule-matched,400,260,0,0.0,1.0,0.35
+approve_all,GuardLedger (full),IsolationForest,all,480,262,3,0.0,0.9125,0.37292
+approve_all,GuardLedger (full),IsolationForest (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+approve_all,GuardLedger (full),IsolationForest (conformal),rule-matched,400,262,0,0.0,1.0,0.345
+approve_all,GuardLedger (full),IsolationForest (conformal),all,480,264,3,0.0,0.9125,0.36875
+approve_all,GuardLedger (full),LOF (conformal),rule-independent,80,34,0,0.0,0.475,0.05
+approve_all,GuardLedger (full),LOF (conformal),rule-matched,400,338,0,0.0,1.0,0.155
+approve_all,GuardLedger (full),LOF (conformal),all,480,372,0,0.0,0.9125,0.1375
+approve_all,GuardLedger (full),Fused S1+IF (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+approve_all,GuardLedger (full),Fused S1+IF (conformal),rule-matched,400,265,0,0.0,1.0,0.3375
+approve_all,GuardLedger (full),Fused S1+IF (conformal),all,480,267,3,0.0,0.9125,0.3625
+approve_all,GuardLedger (full),GL-hard + IF (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+approve_all,GuardLedger (full),GL-hard + IF (conformal),rule-matched,400,0,0,1.0,1.0,1.0
+approve_all,GuardLedger (full),GL-hard + IF (conformal),all,480,2,3,1.0,0.9125,0.91458
+approve_all,GuardLedger (full),GL-hard + fused (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+approve_all,GuardLedger (full),GL-hard + fused (conformal),rule-matched,400,0,0,1.0,1.0,1.0
+approve_all,GuardLedger (full),GL-hard + fused (conformal),all,480,2,3,1.0,0.9125,0.91458
+phi-3.5-mini-instruct|plain,GuardLedger (full),AgentSpec-style,rule-independent,80,38,0,0.0,0.475,0.0
+phi-3.5-mini-instruct|plain,GuardLedger (full),AgentSpec-style,rule-matched,346,251,0,0.0,1.0,0.27457
+phi-3.5-mini-instruct|plain,GuardLedger (full),AgentSpec-style,all,426,289,0,0.0,0.90141,0.223
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard (no soft layer),rule-independent,80,38,0,0.0,0.475,0.0
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard (no soft layer),rule-matched,346,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard (no soft layer),all,426,38,0,0.0,0.90141,0.81221
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-independent,80,12,0,0.00049,0.475,0.325
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-matched,346,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),all,426,12,0,0.00049,0.90141,0.87324
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest,rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest,rule-matched,346,236,0,0.0,1.0,0.31792
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest,all,426,238,3,0.0,0.90141,0.34977
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest (conformal),rule-matched,346,238,0,0.0,1.0,0.31214
+phi-3.5-mini-instruct|plain,GuardLedger (full),IsolationForest (conformal),all,426,240,3,0.0,0.90141,0.34507
+phi-3.5-mini-instruct|plain,GuardLedger (full),LOF (conformal),rule-independent,80,34,0,0.0,0.475,0.05
+phi-3.5-mini-instruct|plain,GuardLedger (full),LOF (conformal),rule-matched,346,288,0,0.0,1.0,0.16763
+phi-3.5-mini-instruct|plain,GuardLedger (full),LOF (conformal),all,426,322,0,0.0,0.90141,0.14554
+phi-3.5-mini-instruct|plain,GuardLedger (full),Fused S1+IF (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|plain,GuardLedger (full),Fused S1+IF (conformal),rule-matched,346,240,0,0.0,1.0,0.30636
+phi-3.5-mini-instruct|plain,GuardLedger (full),Fused S1+IF (conformal),all,426,242,3,0.0,0.90141,0.34038
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + IF (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + IF (conformal),rule-matched,346,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + IF (conformal),all,426,2,3,1.0,0.90141,0.90376
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fused (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fused (conformal),rule-matched,346,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|plain,GuardLedger (full),GL-hard + fused (conformal),all,426,2,3,1.0,0.90141,0.90376
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,rule-independent,80,38,0,0.0,0.475,0.0
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,rule-matched,324,245,0,0.0,1.0,0.24383
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,all,404,283,0,0.0,0.89604,0.19554
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),rule-independent,80,38,0,0.0,0.475,0.0
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),rule-matched,324,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),all,404,38,0,0.0,0.89604,0.80198
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-independent,80,12,0,0.00049,0.475,0.325
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-matched,324,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),all,404,12,0,0.00049,0.89604,0.86634
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest,rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest,rule-matched,324,230,0,0.0,1.0,0.29012
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest,all,404,232,3,0.0,0.89604,0.32921
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest (conformal),rule-matched,324,232,0,0.0,1.0,0.28395
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),IsolationForest (conformal),all,404,234,3,0.0,0.89604,0.32426
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),LOF (conformal),rule-independent,80,34,0,0.0,0.475,0.05
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),LOF (conformal),rule-matched,324,271,0,0.0,1.0,0.16358
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),LOF (conformal),all,404,305,0,0.0,0.89604,0.14109
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),Fused S1+IF (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),Fused S1+IF (conformal),rule-matched,324,232,0,0.0,1.0,0.28395
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),Fused S1+IF (conformal),all,404,234,3,0.0,0.89604,0.32426
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + IF (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + IF (conformal),rule-matched,324,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + IF (conformal),all,404,2,3,1.0,0.89604,0.89851
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fused (conformal),rule-independent,80,2,3,1.0,0.475,0.4875
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fused (conformal),rule-matched,324,0,0,1.0,1.0,1.0
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),GL-hard + fused (conformal),all,404,2,3,1.0,0.89604,0.89851
+qwen2.5-7b-instruct|plain,GuardLedger (full),AgentSpec-style,rule-independent,78,36,0,0.0,0.46154,0.0
+qwen2.5-7b-instruct|plain,GuardLedger (full),AgentSpec-style,rule-matched,302,223,0,0.0,1.0,0.26159
+qwen2.5-7b-instruct|plain,GuardLedger (full),AgentSpec-style,all,380,259,0,0.0,0.88947,0.20789
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard (no soft layer),rule-independent,78,36,0,0.0,0.46154,0.0
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard (no soft layer),rule-matched,302,0,0,1.0,1.0,1.0
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard (no soft layer),all,380,36,0,0.0,0.88947,0.79474
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-independent,78,11,0,0.00098,0.46154,0.32051
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-matched,302,0,0,1.0,1.0,1.0
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + fixed z>3 (no CRC),all,380,11,0,0.00098,0.88947,0.86053
+qwen2.5-7b-instruct|plain,GuardLedger (full),IsolationForest,rule-independent,78,2,3,1.0,0.46154,0.47436
+qwen2.5-7b-instruct|plain,GuardLedger (full),IsolationForest,rule-matched,302,226,0,0.0,1.0,0.25166
+qwen2.5-7b-instruct|plain,GuardLedger (full),IsolationForest,all,380,228,3,0.0,0.88947,0.29737
+qwen2.5-7b-instruct|plain,GuardLedger (full),IsolationForest (conformal),rule-independent,78,2,3,1.0,0.46154,0.47436
+qwen2.5-7b-instruct|plain,GuardLedger (full),IsolationForest (conformal),rule-matched,302,228,0,0.0,1.0,0.24503
+qwen2.5-7b-instruct|plain,GuardLedger (full),IsolationForest (conformal),all,380,230,3,0.0,0.88947,0.29211
+qwen2.5-7b-instruct|plain,GuardLedger (full),LOF (conformal),rule-independent,78,31,0,0.0,0.46154,0.0641
+qwen2.5-7b-instruct|plain,GuardLedger (full),LOF (conformal),rule-matched,302,255,0,0.0,1.0,0.15563
+qwen2.5-7b-instruct|plain,GuardLedger (full),LOF (conformal),all,380,286,0,0.0,0.88947,0.13684
+qwen2.5-7b-instruct|plain,GuardLedger (full),Fused S1+IF (conformal),rule-independent,78,2,3,1.0,0.46154,0.47436
+qwen2.5-7b-instruct|plain,GuardLedger (full),Fused S1+IF (conformal),rule-matched,302,230,0,0.0,1.0,0.23841
+qwen2.5-7b-instruct|plain,GuardLedger (full),Fused S1+IF (conformal),all,380,232,3,0.0,0.88947,0.28684
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + IF (conformal),rule-independent,78,2,3,1.0,0.46154,0.47436
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + IF (conformal),rule-matched,302,0,0,1.0,1.0,1.0
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + IF (conformal),all,380,2,3,1.0,0.88947,0.89211
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + fused (conformal),rule-independent,78,2,3,1.0,0.46154,0.47436
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + fused (conformal),rule-matched,302,0,0,1.0,1.0,1.0
+qwen2.5-7b-instruct|plain,GuardLedger (full),GL-hard + fused (conformal),all,380,2,3,1.0,0.88947,0.89211
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,rule-independent,73,35,0,0.0,0.47945,0.0
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,rule-matched,151,126,0,0.0,0.99338,0.15894
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),AgentSpec-style,all,224,161,0,0.0,0.82589,0.10714
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),rule-independent,73,35,0,0.0,0.47945,0.0
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),rule-matched,151,2,0,0.5,0.99338,0.98013
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard (no soft layer),all,224,37,0,0.0,0.82589,0.66071
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-independent,73,11,0,0.00098,0.47945,0.32877
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),rule-matched,151,1,0,1.0,0.99338,0.98675
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + fixed z>3 (no CRC),all,224,12,0,0.00049,0.82589,0.77232
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),IsolationForest,rule-independent,73,2,3,1.0,0.47945,0.49315
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),IsolationForest,rule-matched,151,108,0,0.0,0.99338,0.27815
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),IsolationForest,all,224,110,3,0.0,0.82589,0.34821
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),IsolationForest (conformal),rule-independent,73,2,3,1.0,0.47945,0.49315
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),IsolationForest (conformal),rule-matched,151,109,0,0.0,0.99338,0.27152
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),IsolationForest (conformal),all,224,111,3,0.0,0.82589,0.34375
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),LOF (conformal),rule-independent,73,32,0,0.0,0.47945,0.0411
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),LOF (conformal),rule-matched,151,131,0,0.0,0.99338,0.12583
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),LOF (conformal),all,224,163,0,0.0,0.82589,0.09821
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),Fused S1+IF (conformal),rule-independent,73,2,3,1.0,0.47945,0.49315
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),Fused S1+IF (conformal),rule-matched,151,108,0,0.0,0.99338,0.27815
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),Fused S1+IF (conformal),all,224,110,3,0.0,0.82589,0.34821
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + IF (conformal),rule-independent,73,2,3,1.0,0.47945,0.49315
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + IF (conformal),rule-matched,151,0,0,1.0,0.99338,0.99338
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + IF (conformal),all,224,2,3,1.0,0.82589,0.83036
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + fused (conformal),rule-independent,73,2,3,1.0,0.47945,0.49315
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + fused (conformal),rule-matched,151,0,0,1.0,0.99338,0.99338
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),GL-hard + fused (conformal),all,224,2,3,1.0,0.82589,0.83036

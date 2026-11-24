@@ -1,0 +1,16 @@
+stream,guard,n_harm_proposed,prevention,prev_lo,prev_hi,fpr_legit,fpr_lo,fpr_hi,usd_leaked,usd_held,harm_exec_rate_all,lat_p50_us,lat_p99_us
+heldout|approve_all,NoGuard,200,0.0,0.0,0.0,,,,3030745.52,0.0,1.0,0.0,0.0
+heldout|approve_all,AgentSpec-style,200,0.0,0.0,0.0,,,,3030745.52,0.0,1.0,23.966,159.07293
+heldout|approve_all,GuardLedger (full),200,0.25,0.195,0.315,,,,753398.13,0.0,0.75,112.5335,415.66199
+heldout|approve_all,GL-hard (no soft layer),200,0.015,0.0,0.035,,,,2923832.98,0.0,0.985,55.8315,286.98001
+heldout|approve_all,GL-hard - encumbrance,200,0.01,0.0,0.025,,,,3030135.67,0.0,0.99,59.2825,279.44917
+heldout|approve_all,GL-hard - trajectory,200,0.005,0.0,0.015,,,,2924442.83,0.0,0.995,50.472,255.81373
+heldout|approve_all,GL-hard - provenance,200,0.015,0.0,0.035,,,,2923832.98,0.0,0.985,57.8425,315.56276
+heldout|approve_all,GL-hard - quantitative,200,0.0,0.0,0.0,,,,3030745.52,0.0,1.0,15.052,62.96981
+heldout|approve_all,GL-hard + fixed z>3 (no CRC),200,0.14,0.095,0.19,,,,1670482.42,0.0,0.86,115.6065,360.42527
+heldout|approve_all,IsolationForest,200,0.415,0.35488,0.48,,,,236130.61,0.0,0.585,18328.189,36419.43904
+heldout|approve_all,IsolationForest (conformal),200,0.41,0.345,0.475,,,,241057.52,0.0,0.59,18276.1715,33345.55751
+heldout|approve_all,LOF (conformal),200,0.205,0.15,0.26012,,,,1856027.34,0.0,0.795,844.7965,1180.29722
+heldout|approve_all,Fused S1+IF (conformal),200,0.42,0.355,0.485,,,,228754.61,0.0,0.58,18418.0775,23064.35987
+heldout|approve_all,GL-hard + IF (conformal),200,0.42,0.355,0.485,,,,240447.67,0.0,0.58,57.1705,404.87023
+heldout|approve_all,GL-hard + fused (conformal),200,0.43,0.365,0.495,,,,228144.76,0.0,0.57,54.694,370.5019

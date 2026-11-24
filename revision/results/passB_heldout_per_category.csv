@@ -1,0 +1,21 @@
+category,guard,prevention
+CROSS_REQUESTER_SPLIT,GuardLedger (full),0.8
+CROSS_VENDOR_DOUBLE_BILLING,GuardLedger (full),0.1
+PASS_THROUGH_MARKUP,GuardLedger (full),0.2
+PERSONAL_PURCHASE,GuardLedger (full),0.05
+SELF_RECEIPTED_PURCHASE,GuardLedger (full),0.1
+CROSS_REQUESTER_SPLIT,GL-hard (no soft layer),0.025
+CROSS_VENDOR_DOUBLE_BILLING,GL-hard (no soft layer),0.0
+PASS_THROUGH_MARKUP,GL-hard (no soft layer),0.05
+PERSONAL_PURCHASE,GL-hard (no soft layer),0.0
+SELF_RECEIPTED_PURCHASE,GL-hard (no soft layer),0.0
+CROSS_REQUESTER_SPLIT,IsolationForest,0.95
+CROSS_VENDOR_DOUBLE_BILLING,IsolationForest,0.525
+PASS_THROUGH_MARKUP,IsolationForest,0.05
+PERSONAL_PURCHASE,IsolationForest,0.475
+SELF_RECEIPTED_PURCHASE,IsolationForest,0.075
+CROSS_REQUESTER_SPLIT,GL-hard + IF (conformal),0.925
+CROSS_VENDOR_DOUBLE_BILLING,GL-hard + IF (conformal),0.525
+PASS_THROUGH_MARKUP,GL-hard + IF (conformal),0.1
+PERSONAL_PURCHASE,GL-hard + IF (conformal),0.475
+SELF_RECEIPTED_PURCHASE,GL-hard + IF (conformal),0.075

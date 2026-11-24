@@ -1,0 +1,9 @@
+Pass B (GPU session) rebuilt the four V2 LLM streams from the V2 generation caches.
+Matched cache entries: 865 of 878 agent steps per stream (13 steps unmatched -> their tasks excluded; 467 of 480 violation tasks evaluated).
+Reproduction vs V2 (expD_llm_summary.csv): identical n_harm_proposed, prevention, false-hold rate and executed harmful amount:
+qwen plain:  n_harm 380; GuardLedger 0.88947 (V2 88.95%); IsolationForest 0.29737 (V2 29.74%); AgentSpec-style 0.20789 (V2 20.79%); GL FHR 0.04603 (V2 4.60%); GL leaked 219215.45 (V2 219,215.45)
+qwen policy: n_harm 224; GuardLedger 0.82589 (V2 82.59%); IF 0.34821 (V2 34.82%); GL FHR 0.05181 (V2 5.18%); GL leaked 195395.98 (V2)
+phi plain:   n_harm 426; GuardLedger 0.90141 (V2 90.14%); GL FHR 0.04583 (V2 4.58%); GL leaked 219215.45
+HER differs only by denominator (467 vs 480 tasks): 42/467 = 0.08994 vs 42/480 = 0.0875.
+CPU sessions (pass A v1, export) did NOT reproduce the V2 benchmark (only 9 of 883 cache keys matched; approve-all GuardLedger prevention 0.9354 vs V2 0.9125).
+Cause under investigation: benchmark generation is not bit-reproducible across Kaggle machine types (set-iteration order in candidate lists, e.g. vendor_master in task generation, and possibly floating-point differences). Pass A was therefore re-run on the GPU machine type (version 2) with GPU sections disabled.

@@ -1,0 +1,41 @@
+stream,guard,n_harm_proposed,prevention,prev_lo,prev_hi,fpr_legit,harm_exec_rate_all
+qwen2.5-7b-instruct|plain,NoGuard,380,0.0,0.0,0.0,0.0,0.8137
+qwen2.5-7b-instruct|plain,AgentSpec-style,380,0.20789,0.16579,0.25,0.0,0.64454
+qwen2.5-7b-instruct|plain,GuardLedger (full),380,0.88947,0.85789,0.92105,0.04603,0.08994
+qwen2.5-7b-instruct|plain,GL-hard (no soft layer),380,0.79474,0.7552,0.83421,0.0,0.16702
+qwen2.5-7b-instruct|plain,GL-hard - encumbrance,380,0.69474,0.64737,0.73954,0.0,0.24839
+qwen2.5-7b-instruct|plain,GL-hard - trajectory,380,0.68947,0.64204,0.73684,0.0,0.25268
+qwen2.5-7b-instruct|plain,GL-hard - provenance,380,0.72368,0.67895,0.76842,0.0,0.22484
+qwen2.5-7b-instruct|plain,GL-hard - quantitative,380,0.27895,0.23158,0.32368,0.0,0.58672
+qwen2.5-7b-instruct|plain,GL-hard + fixed z>3 (no CRC),380,0.86053,0.82632,0.89474,0.0,0.11349
+qwen2.5-7b-instruct|plain,IsolationForest,380,0.29737,0.25526,0.35,0.04603,0.57173
+qwen2.5-7b-instruct|policy_prompt,NoGuard,224,0.0,0.0,0.0,0.0,0.47966
+qwen2.5-7b-instruct|policy_prompt,AgentSpec-style,224,0.10714,0.07143,0.15179,0.0,0.42827
+qwen2.5-7b-instruct|policy_prompt,GuardLedger (full),224,0.82589,0.77679,0.875,0.05181,0.08351
+qwen2.5-7b-instruct|policy_prompt,GL-hard (no soft layer),224,0.66071,0.60268,0.72321,0.0,0.16274
+qwen2.5-7b-instruct|policy_prompt,GL-hard - encumbrance,224,0.53125,0.46875,0.59821,0.0,0.22484
+qwen2.5-7b-instruct|policy_prompt,GL-hard - trajectory,224,0.51339,0.44643,0.58047,0.0,0.2334
+qwen2.5-7b-instruct|policy_prompt,GL-hard - provenance,224,0.65179,0.59375,0.71429,0.0,0.16702
+qwen2.5-7b-instruct|policy_prompt,GL-hard - quantitative,224,0.11607,0.07589,0.16071,0.0,0.42398
+qwen2.5-7b-instruct|policy_prompt,GL-hard + fixed z>3 (no CRC),224,0.77232,0.7231,0.82589,0.0,0.10921
+qwen2.5-7b-instruct|policy_prompt,IsolationForest,224,0.34821,0.28571,0.41964,0.04145,0.31263
+phi-3.5-mini-instruct|plain,NoGuard,426,0.0,0.0,0.0,0.0,0.91221
+phi-3.5-mini-instruct|plain,AgentSpec-style,426,0.223,0.18545,0.26297,0.0,0.70878
+phi-3.5-mini-instruct|plain,GuardLedger (full),426,0.90141,0.87559,0.92958,0.04583,0.08994
+phi-3.5-mini-instruct|plain,GL-hard (no soft layer),426,0.81221,0.77465,0.84977,0.0,0.17131
+phi-3.5-mini-instruct|plain,GL-hard - encumbrance,426,0.71831,0.67371,0.76056,0.0,0.25696
+phi-3.5-mini-instruct|plain,GL-hard - trajectory,426,0.71831,0.676,0.76056,0.0,0.25696
+phi-3.5-mini-instruct|plain,GL-hard - provenance,426,0.77465,0.73239,0.81455,0.0,0.20557
+phi-3.5-mini-instruct|plain,GL-hard - quantitative,426,0.26056,0.21831,0.30282,0.0,0.67452
+phi-3.5-mini-instruct|plain,GL-hard + fixed z>3 (no CRC),426,0.87324,0.84272,0.90381,0.0,0.11563
+phi-3.5-mini-instruct|plain,IsolationForest,426,0.34977,0.30745,0.39906,0.04583,0.59315
+phi-3.5-mini-instruct|policy_prompt,NoGuard,404,0.0,0.0,0.0,0.0,0.8651
+phi-3.5-mini-instruct|policy_prompt,AgentSpec-style,404,0.19554,0.15594,0.23762,0.0,0.69593
+phi-3.5-mini-instruct|policy_prompt,GuardLedger (full),404,0.89604,0.86627,0.92333,0.04583,0.08994
+phi-3.5-mini-instruct|policy_prompt,GL-hard (no soft layer),404,0.80198,0.76238,0.84158,0.0,0.17131
+phi-3.5-mini-instruct|policy_prompt,GL-hard - encumbrance,404,0.70297,0.66083,0.74752,0.0,0.25696
+phi-3.5-mini-instruct|policy_prompt,GL-hard - trajectory,404,0.70297,0.65594,0.74752,0.0,0.25696
+phi-3.5-mini-instruct|policy_prompt,GL-hard - provenance,404,0.76238,0.7203,0.80198,0.0,0.20557
+phi-3.5-mini-instruct|policy_prompt,GL-hard - quantitative,404,0.23515,0.19307,0.2797,0.0,0.66167
+phi-3.5-mini-instruct|policy_prompt,GL-hard + fixed z>3 (no CRC),404,0.86634,0.82921,0.90099,0.0,0.11563
+phi-3.5-mini-instruct|policy_prompt,IsolationForest,404,0.32921,0.28218,0.37624,0.04583,0.5803
