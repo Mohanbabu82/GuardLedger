@@ -21,3 +21,9 @@ CFG["LLM_MODELS"] = [
 REV_OVERRIDE = dict()
 exec(compile(open(os.path.join(W, "guardledger_revision.py")).read(), "guardledger_revision.py", "exec"), globals())
 print(open(os.path.join(REV["OUT"], "revision_summary.md")).read())
+import pandas as _pd   # print every result table into the log (readable without downloading the output)
+for _p in sorted(glob.glob(os.path.join(REV["OUT"], "*"))):
+    if _p.endswith(".gz"): continue
+    _n = os.path.basename(_p); print(f"\n<<<FILE {_n}>>>")
+    print(open(_p).read() if _p.endswith((".json", ".md")) else _pd.read_csv(_p).round(5).to_csv(index=False))
+    print(f"<<<END {_n}>>>")
