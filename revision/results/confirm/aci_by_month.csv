@@ -1,0 +1,10 @@
+# empirical false-hold rate on oracle-compliant later-period invoices; target alpha = 0.05; ACI gamma 0.005, window 2000
+score,month,n,static,rolling,aci,aci_median_threshold
+IF,2018-09,325,0.07385,0.07385,0.05846,0.58081
+IF,2018-10,1466,0.06412,0.06412,0.05048,0.57531
+IF,2018-11,1311,0.03585,0.02746,0.04729,0.54539
+IF,2018-12,1441,0.04511,0.0458,0.05066,0.55077
+IF,2019-01,721,0.04161,0.04577,0.043,0.54904
+IF,ALL,5264,0.04939,0.04806,0.0492,0.55756
+S1,ALL,5264,0.0568,0.05186,0.04977,1.65334
+# static thresholds: IF 0.56241, S1 1.58928

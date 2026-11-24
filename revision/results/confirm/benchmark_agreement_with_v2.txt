@@ -1,0 +1,7 @@
+# 50 stream-guard pairs re-run on the frozen benchmark vs the V2 outputs: max absolute difference
+n_harm 0
+prevention 0
+fpr 0
+usd_leaked 0
+her 0.02471   # only from the Phi 467-task HER denominator (V2 used 480)
+# GLIF Phi streams: 41 harmful executions; 41/480 = 0.08542 (R8 blocks every deviating approval in the 13 excluded injection tasks)

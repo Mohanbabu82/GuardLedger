@@ -1,0 +1,14 @@
+{
+ "session": "guardledger-revision-export, version 2, accelerator None (CPU), DIAG_ONLY",
+ "PYTHONHASHSEED": null, "hash_randomization": 1, "python": "3.13.18", "numpy": "2.1.3", "pandas": "2.3.3", "gpu": false,
+ "cpu_model": "Intel(R) Xeon(R) CPU @ 2.20GHz", "avx2": true, "avx512f": false, "avx512_vbmi2": false, "n_cpu": 4,
+ "inv_rows": 211334, "inv_rows_with_tied_time": 175335,
+ "inv_order_fp": "9c69b1fc148df1072f15d62bfc6aefb36a6bee7495e5c557700638523fa7412c", "inv_order_equals_stable": false,
+ "bench_fp_session": "ea28aad94c4a3e10bf055f97dacf81e6d09fd2d63c3cf4e23a26f59c3f9b9104",
+ "vendor_master_first5_in_set_order": ["vendorID_1091", "vendorID_1368", "vendorID_0734", "vendorID_0840", "vendorID_1265"],
+ "variants": [
+  {"variant": "v2_code", "inv_order_fp": "9c69b1fc148df1072f15d62bfc6aefb36a6bee7495e5c557700638523fa7412c", "bench_fp": "ea28aad94c4a3e10bf055f97dacf81e6d09fd2d63c3cf4e23a26f59c3f9b9104", "seconds": 42.0, "n_tasks": 720},
+  {"variant": "sorted_set", "inv_order_fp": "9c69b1fc148df1072f15d62bfc6aefb36a6bee7495e5c557700638523fa7412c", "bench_fp": "39d8925a53a04fa135e5224699e3ca16655f49c116bb6fbc8ccaf06989e57adc", "seconds": 42.7, "n_tasks": 720},
+  {"variant": "sorted_set_stable_sort", "inv_order_fp": "76a6561bba487f392193a73c961b99a97887757bbb1b270845bf55fcb3dedddf", "bench_fp": "efd15ed2833e77aa0a79edbb4ecff7da109819c018877ca8db33523221d985b8", "seconds": 42.9, "n_tasks": 720}],
+ "restoration": {"steps_missing_before": 874, "steps_missing_after": 874, "total_steps": 883, "note": "different benchmark instance on this machine type: only 9 of 883 steps have a V2 cache entry"}
+}

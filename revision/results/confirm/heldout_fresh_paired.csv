@@ -1,0 +1,7 @@
+hypothesis,comparison,n,a_only,b_only,p_exact,p_exact_recomputed
+H1,GLIF_vs_GLS1,600,123,27,0.0,7.71e-16
+H2,GLIF_vs_IFC,600,4,0,0.125,0.125
+H2b,GLIF_vs_IF,600,4,1,0.375,0.375
+-,GLS1_vs_IF,600,31,124,0.0,2.24e-14
+-,GLIF_vs_GHFus,600,1,3,0.625,0.625
+# p_exact printed by the run rounds to 0.0; recomputed with scipy.stats.binomtest (two-sided) from the discordant counts
