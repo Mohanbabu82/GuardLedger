@@ -5,7 +5,7 @@ Deterministic, ledger-aware pre-execution verification of an LLM agent's invoice
 GuardLedger checks each proposed payment against purchase-to-pay ledger state reconstructed as of decision time. That state comprises month-to-date actuals, open purchase-order commitments, the vendor master, mined approval authority and vendor history. On top of the ledger checks, GuardLedger adds:
 - trajectory checks for duplicate and split purchases;
 - equality of payment arguments with the system of record;
-- a robust price score with a split-conformal (conformal risk control) escalation threshold.
+- a pluggable residual anomaly detector (an Isolation Forest by default; the original robust price score S1 is kept as an ablation) that escalates at a split-conformal threshold, recalibrated online with adaptive conformal inference.
 
 The benchmark and natural audit are built from the public **BPI Challenge 2019** event log.
 
@@ -43,6 +43,20 @@ python analysis/make_diagrams.py          # Figures 1-2 (diagrams)
 ## Citation
 [Add the BibTeX entry after publication.]
 
-## Revision experiments (reviewer-requested analyses)
+## Revision experiments and confirmatory pass
 
-`revision/guardledger_revision.py` runs additional analyses on top of the frozen V2 pipeline (per-task logs, paired tests by typology group, stronger anomaly baselines, fail-closed judges, policy sensitivity, extra seeds, rolling-origin and adaptive conformal calibration, held-out typologies, and optional GPU runs with larger judges and agents). How to run it on Kaggle is described in `revision/RUN_REVISION_ON_KAGGLE.md`. Its results are not part of the V2 results in `results/` and are not reported in the manuscript until they have been run.
+`revision/guardledger_revision.py` runs the supplementary analyses on top of the frozen V2 pipeline (per-task logs, paired tests by typology group, stronger anomaly baselines, fail-closed judges, policy sensitivity, extra seeds, rolling-origin and adaptive conformal calibration, held-out typologies, and GPU runs with a larger judge and agent). How to run it on Kaggle is described in `revision/RUN_REVISION_ON_KAGGLE.md`. Its results are in `revision/results/` and are reported in the manuscript and its supplementary material, separately from the V2 results in `results/`.
+
+The pre-registered confirmatory pass is specified in `revision/CONFIRMATORY_PROTOCOL.md`, which was committed before the run, and is implemented in `revision/confirmatory.py` and `revision/run_confirmatory.py`. Its results are in `revision/results/confirm/`.
+
+## Frozen task files
+
+Benchmark generation is not bit-identical across machine types, so the benchmark is defined by frozen task files in `revision/frozen_tasks/` (one canonical JSON object per task, gzip-compressed). SHA-256 hashes of the uncompressed JSONL files:
+
+| File | Tasks | SHA-256 (uncompressed) |
+|---|---|---|
+| `benchmark_v2_720.jsonl.gz` | 720 | `936199965c4a06f40a229bcbecfabd13457c6438cb7ce8546f92d85bde687953` |
+| `heldout_seed314_200.jsonl.gz` | 200 | `99a5beb4b8ed48dbd995a40dc9fccba0c7ab877f89796eb9b59e29aa0690aaa9` |
+| `heldout_fresh_600.jsonl.gz` | 600 | `9195d8695742b505bfe6f8e8f37e4b3a3a2b5a4dbc0890bd70a177a828496076` |
+
+The hashes of the compressed files are in `revision/frozen_tasks/frozen_tasks_manifest.json`.
